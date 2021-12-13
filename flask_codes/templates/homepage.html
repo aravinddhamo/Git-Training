@@ -1,0 +1,85 @@
+{% extends 'layouts.html' %}
+
+{%block content%}
+<div class="container w-50">
+    <form method="POST" action="">
+        {{form.hidden_tag()}}
+        <fieldset>
+            <legend class="border-bottom mb-4">Client Package Details</legend>
+            <div class="form-group">
+                {{form.ClientId.label(class="form-control-label")}}
+                {% if form.ClientId.errors %}
+                {{form.ClientId(class="form-control form-control-lg is-invalid")}}
+                {% for error in form.ClientId.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+                {% else %}
+                {{form.ClientId(class="form-control form-control-lg")}}
+                
+                {% endif %}
+               
+            </div>
+        
+
+        <div class="form-group">
+            {{form.ClientName.label(class="form-control-label")}}
+            {%if form.ClientName.errors%}
+            {{form.ClientName(class="form-control form-control-lg is-invalid")}}
+            {%for error in form.ClientId.errors%}
+            <span>{{error}}</span>
+            {%endfor%}
+            {%else%}
+            {{form.ClientName(class="form-control form-control-lg")}}
+            {%endif%}
+           
+        </div>
+
+        <div class="form-group">
+            {{form.ClientType.label(class="form-control-label")}}
+            {%if form.ClientType.errors%}
+            {{form.ClientType(class="form-control form-control-lg is-invalid")}}
+            {%for error in form.ClientType.errors%}
+            <span>{{error}}</span>
+            {%endfor%}
+            {%else%}
+            {{form.ClientType(class="form-control form-control-lg")}}
+            {%endif%}
+           
+        </div>
+
+        <div class="form-group">
+            {{form.ClientBSI.label(class="form-control-label")}}
+            {%if form.ClientBSI.errors%}
+            {{form.ClientBSI(class="form-control form-control-lg is-invalid")}}
+            {%for error in form.ClientBSI.errors%}
+            <span>{{error}}</span>
+            {%endfor%}
+            {%else%}
+            {{form.ClientBSI(class="form-control form-control-lg")}}
+            {%endif%}
+           
+        </div>
+
+        <div class="form-group">
+            {{form.ClientStatus.label(class="form-control-label")}}
+            {%if form.ClientStatus.errors%}
+            {{form.ClientStatus(class="form-control form-control-lg is-invalid")}}
+            {%for error in form.ClientStatus.errors%}
+            <span>{{error}}</span>
+            {%endfor%}
+            {%else%}
+            {{form.ClientStatus(class="form-control form-control-lg")}}
+            {%endif%}
+           
+        </div>
+        
+        <div class="form-group mt-4">
+            {{form.Submit(class="btn btn-primary")}}
+            
+        </div>
+    </fieldset>
+    </form>
+</div>
+
+
+{%endblock content%}

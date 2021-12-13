@@ -1,0 +1,25 @@
+{% extends 'layouts.html' %}
+
+{%block content%}
+
+
+<table style="width: 90%;border-style: solid;border-width: 5px;">
+    <tr style="border-style: solid;border-width: 3px;">
+      <td style="color: rgb(231, 27, 27); font-size: large;">CLIENT ID</td>
+      <td style="color: rgb(231, 27, 27); font-size: large;">CLIENT NAME</td>
+      <td style="color: rgb(231, 27, 27); font-size: large;">TRANSMISSION TYPE</td>
+      <td style="color: rgb(231, 27, 27); font-size: large;">BSI FORMAT</td>
+      <td style="color: rgb(231, 27, 27); font-size: large;">STATUS</td>
+      
+    </tr>
+    <tr>
+      <td>{{clientids}}</td>
+      <td>{{clientnames}}</td>
+      <td>{{clienttypes}}</td>
+      <td>{{clientbsis}}</td>
+      <td>{{clientstatuss}}</td>
+      
+    </tr>
+    </table>
+    
+    {%endblock content%}

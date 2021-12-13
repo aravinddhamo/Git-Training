@@ -1,0 +1,27 @@
+{% extends 'layouts.html' %}
+
+{%block contentA%}
+<div class="card text-center" style="width: 85rem;padding: 25px;background-color: #1b2653;">
+    <div class="card-body" style="color: white;">
+      <h5 class="card-title">View All Tasklist</h5>
+      <p class="card-text">View all the tasklist that are created.</p>
+      <a href="{{url_for('all_tskl')}}" class="btn btn-primary">Click Here</a>
+    </div>
+  </div>
+  
+  <div class="card text-center" style="width: 85rem;padding: 25px;background-color: white;">
+    <div class="card-body">
+      <h5 class="card-title">Enter Tasklist</h5>
+      <p class="card-text">Enter the new tasklist by providing all the details.</p>
+      <a href="{{url_for('home')}}" class="btn btn-primary">Click Here</a>
+    </div>
+  </div>
+  
+  <div class="card text-center" style="width: 85rem;padding: 25px;background-color: #1b2653;">
+    <div class="card-body" style="color: white;">
+      <h5 class="card-title">Search Tasklist</h5>
+      <p class="card-text">Search created tasklist based on the Client Id.</p>
+      <a href="{{url_for('search')}}" class="btn btn-primary">Click Here</a>
+    </div>
+  </div>
+    {%endblock contentA%}

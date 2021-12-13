@@ -1,0 +1,10 @@
+.test{
+    width: 600;
+    height: 600;
+    background-color: green;
+}
+
+
+.test p{
+    color: white;
+}
