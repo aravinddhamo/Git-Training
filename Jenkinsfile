@@ -1,8 +1,5 @@
 pipeline {
-  agent { label 'linux'}
-  options {
-    skipDefaultCheckout(true)
-  }
+  agent any
   stages{
     stage('clean workspace') {
       steps {
